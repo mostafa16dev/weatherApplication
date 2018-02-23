@@ -15,17 +15,6 @@ angular.module('myApp.dashboard', ['ngRoute','chart.js'])
 
   $scope.showMonthlyAverage = false;
 
-  $scope.userCity;
-  if(sessionStorage.getItem("userCity") === null){
-    $scope.userCity = localStorage.getItem("userCity");
-    $scope.getWeather($scope.userCity);
-  }else{
-    appService.getUserData().then(function (data) {
-      $scope.userCity = data.regionName;
-      $scope.getWeather($scope.userCity);
-      });
-  }
-
   $scope.getWeather = function (q) {
     appService.getWeather(10,q).then(function (data) {
       if(data.data.error != undefined){
@@ -51,6 +40,19 @@ angular.module('myApp.dashboard', ['ngRoute','chart.js'])
       });
       $scope.city = '';
     }
+
+  $scope.userCity;
+  if(sessionStorage.getItem("userCity") !== null){
+    $scope.userCity = sessionStorage.getItem("userCity");
+    $scope.getWeather($scope.userCity);
+  }else{
+    appService.getUserData().then(function (data) {
+      $scope.userCity = data.regionName;
+      $scope.getWeather($scope.userCity);
+      });
+  }
+
+
 
   function getHourlyTemp(data){
     var hourlyTemp = [];
