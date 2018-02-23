@@ -16,8 +16,10 @@ var images = [
 
 ];
 
-//14 files
+//16 files
 var usedJSFiles = [
+    'assets/jquery.min.js',
+    'assets/bootstrap.min.js',
     'bower_components/angular/angular.js',
     'bower_components/angular-route/angular-route.js',
     'bower_components/ngGeolocation/ngGeolocation.min.js',
