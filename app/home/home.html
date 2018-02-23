@@ -1,0 +1,27 @@
+<nav-bar></nav-bar>
+
+<div class="home">
+  <div class="container">
+      <div class="thumbnail">
+        <div class="row weather-summary">
+          <div class="col-md-6 weather-summary-main">
+            <ul>
+              <li>{{userCity}}</li>
+              <li>{{observationTime}}</li>
+              <li>{{weatherDescription}}</li>
+              <li><img ng-src="{{weatherIconUrl}}" alt="weather"><span>{{tempC}} °C</span></li>
+            </ul>
+          </div>
+          <div class="col-md-6 weather-summary-sub">
+            <ul>
+              <li>Precipitation: {{precipitation}}</li>
+              <li>Humidity: {{humidity}}%</li>
+              <li>Wind: {{windSpeedKmph}} km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+

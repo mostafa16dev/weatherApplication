@@ -1,0 +1,78 @@
+<nav-bar></nav-bar>
+
+<div class="dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="thumbnail">
+        <div class="row weather-summary">
+          <div class="col-md-4 weather-summary-main">
+            <ul>
+              <li>{{userCity}}</li>
+              <li>{{currentWeather.observation_time}}</li>
+              <li>{{currentWeather.weatherDesc[0].value}}</li>
+              <li><img ng-src="{{currentWeather.weatherIconUrl[0].value}}" alt="weather"><span>{{currentWeather.temp_C}} °C</span></li>
+            </ul>
+          </div>
+          <div class="col-md-4 weather-summary-sub">
+            <ul>
+              <li>Precipitation: {{currentWeather.precipMM}}</li>
+              <li>Humidity: {{currentWeather.humidity}}%</li>
+              <li>Wind: {{currentWeather.windspeedKmph}} km/h</li>
+              <li>Pressure: {{currentWeather.pressure}}</li>
+              <li>Cloud cover: {{currentWeather.cloudcover}}</li>
+              <li>Visibilty: {{currentWeather.visibility}}</li>
+            </ul>
+          </div>
+          <div class="col-md-4 weather-summary-sub-right">
+            <ul>
+              <li>Sunrise: {{astronomy.sunrise}}</li>
+              <li>Sunset: {{astronomy.sunset}}</li>
+              <li>Moonrise: {{astronomy.moonrise}}</li>
+              <li>Moonset: {{astronomy.moonset}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="thumbnail hourlyTemperatureChart">
+          <h3>Hourly Temperature</h3>
+          <canvas id="line" class="chart chart-line" chart-data="hourlyTemp"
+            chart-labels="labels" chart-series="series" chart-options="options"
+            chart-dataset-override="datasetOverride" chart-click="onClick" chart-colors="colors">
+          </canvas>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="thumbnail tenDays">
+        <h3>10 days weather forecast</h3>
+        <table class="table">
+          <tr class="active">
+            <th>Day</th>
+            <th>Max Temp</th> 
+            <th>Min Temp</th>
+            <th>Total snow in cm</th>
+          </tr>
+          <tr ng-repeat="day in tenDaysWeather">
+            <td>{{day.date | date: "EEE, d MMM"}}</td>
+            <td>{{day.maxtempC}} °C</td> 
+            <td>{{day.mintempC}} °C</td>
+            <td>{{day.totalSnow_cm}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="row" ng-show="showMonthlyAverage">
+      <div class="thumbnail monthlyAverage">
+        <h3>Monthly Average</h3>
+        <canvas id="line" class="chart chart-line" chart-data="monthlyAverage"
+          chart-labels="monthlyLabels" chart-series="monthlySeries" chart-options="options"
+          chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>

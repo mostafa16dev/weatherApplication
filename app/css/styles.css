@@ -1,0 +1,68 @@
+/* home */
+.home button{
+    padding: 21px;
+    border-radius: 30%;
+}
+/* ------ */
+
+.weather-summary ul li{
+    list-style-type: none;
+}
+
+.weather-summary .weather-summary-main li:first-child{
+    font-size: 30px;
+    color: #949494;
+}
+
+ .weather-summary li{
+    font-size: 17px;
+    color: #999999	;
+}
+
+.weather-summary .weather-summary-main li img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.weather-summary .weather-summary-main li span{
+    margin-left: 8px;
+    font-size: 40px;
+    color: #555555;
+    top: 10px;
+    position: relative;
+}
+
+.weather-summary-sub{
+    margin-top: 5em;
+}
+
+/* dashboard  */
+.dashboard .weather-summary-sub{
+    margin-top: 1em;
+}
+
+.dashboard .weather-summary-sub-right{
+    margin-top: 4em;
+}
+
+.dashboard .hourlyTemperatureChart{
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.dashboard h3{
+    font-size: 30px;
+    color: #949494;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.dashboard .table>tbody>tr>td,
+.dashboard .table>tbody>tr>th,
+.dashboard .table>tfoot>tr>td, 
+.dashboard .table>tfoot>tr>th, 
+.dashboard .table>thead>tr>td, 
+.dashboard .table>thead>tr>th{
+    color: #555555;
+}
+/* ------ */
