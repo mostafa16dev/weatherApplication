@@ -4,7 +4,6 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var ngAnnotate = require('gulp-ng-annotate-plus');
 var uglifycss = require('gulp-uglifycss');
-var imagemin = require('gulp-imagemin');
 
 
 //script paths
@@ -12,9 +11,7 @@ var jsDest = 'dist/scripts',
     cssDest = 'dist/css',
     imageDest = 'dist/images';
 
-var images = [
 
-];
 
 //16 files
 var usedJSFiles = [
