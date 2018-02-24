@@ -7,39 +7,39 @@ var uglifycss = require('gulp-uglifycss');
 
 
 //script paths
-var jsDest = 'myDist/scripts',
-    cssDest = 'myDist/css';
+var jsDest = 'app/dist/scripts',
+    cssDest = 'app/dist/css';
 
 
 
 //16 files
 var usedJSFiles = [
-    'assets/jquery.min.js',
-    'assets/bootstrap.min.js',
-    'bower_components/angular/angular.js',
-    'bower_components/angular-route/angular-route.js',
-    'bower_components/ngGeolocation/ngGeolocation.min.js',
-    'bower_components/angular-ui-notification/dist/angular-ui-notification.min.js',
-    'bower_components/chart.js/dist/Chart.min.js',
-    'bower_components/angular-chart.js/dist/angular-chart.min.js',
-    'app.js',
-    'services.js',
-    'home/home.js',
-    'navbar/navbar.js',
-    'dashboard/dashboard.js',
-    'components/version/version.js',
-    'components/version/version-directive.js',
-    'components/version/interpolate-filter.js'
+    'app/assets/jquery.min.js',
+    'app/assets/bootstrap.min.js',
+    'app/bower_components/angular/angular.js',
+    'app/bower_components/angular-route/angular-route.js',
+    'app/bower_components/ngGeolocation/ngGeolocation.min.js',
+    'app/bower_components/angular-ui-notification/dist/angular-ui-notification.min.js',
+    'app/bower_components/chart.js/dist/Chart.min.js',
+    'app/bower_components/angular-chart.js/dist/angular-chart.min.js',
+    'app/app.js',
+    'app/services.js',
+    'app/home/home.js',
+    'app/navbar/navbar.js',
+    'app/dashboard/dashboard.js',
+    'app/components/version/version.js',
+    'app/components/version/version-directive.js',
+    'app/components/version/interpolate-filter.js'
 ];
 
 //6 files
 var usedCSSFiles = [
-    'bower_components/html5-boilerplate/dist/css/normalize.css',
-    'bower_components/html5-boilerplate/dist/css/main.css',
-    'bower_components/angular-ui-notification/dist/angular-ui-notification.min.css',
-    'app.css',
-    'css/bootstrap.min.css',
-    'css/styles.css'
+    'app/bower_components/html5-boilerplate/dist/css/normalize.css',
+    'app/bower_components/html5-boilerplate/dist/css/main.css',
+    'app/bower_components/angular-ui-notification/dist/angular-ui-notification.min.css',
+    'app/app.css',
+    'app/css/bootstrap.min.css',
+    'app/css/styles.css'
 ];
 
 //I just use this for everthing for the css files
