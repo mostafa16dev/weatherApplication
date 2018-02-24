@@ -1,15 +1,14 @@
 var gulp = require('gulp');
+var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
 var ngAnnotate = require('gulp-ng-annotate-plus');
 var uglifycss = require('gulp-uglifycss');
 
 
 //script paths
-var jsDest = 'dist/scripts',
-    cssDest = 'dist/css',
-    imageDest = 'dist/images';
+var jsDest = 'myDist/scripts',
+    cssDest = 'myDist/css';
 
 
 
@@ -66,11 +65,5 @@ gulp.task('scripts', function() {
       .pipe(gulp.dest(jsDest));
 });
 
-//compress images
-gulp.task('images', function() {
-  gulp.src(images)
-        .pipe(imagemin())
-        .pipe(gulp.dest(imageDest))
-});
 
 gulp.task('default',['css', 'scripts']);
